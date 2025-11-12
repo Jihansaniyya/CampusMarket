@@ -23,12 +23,21 @@ class UserFactory extends Factory
      */
     public function definition(): array
     {
+        $role = $this->faker->randomElement(['buyer', 'seller']);
+
         return [
-            'name' => fake()->name(),
-            'email' => fake()->unique()->safeEmail(),
-            'email_verified_at' => now(),
+            'name' => $this->faker->name(),
+            'email' => $this->faker->unique()->safeEmail(),
             'password' => static::$password ??= Hash::make('password'),
+            'phone' => $this->faker->phoneNumber(),
+            'role' => $role,
+            'store_name' => $role === 'seller' ? $this->faker->unique()->company() : null,
+            'description' => $this->faker->text(200),
             'remember_token' => Str::random(10),
+            'email_verified_at' => now(),
+            'email_verification_token' => null,
+            'store_verified_at' => $role === 'seller' ? now() : null,
+            'last_login_at' => now()->subDays($this->faker->numberBetween(0, 30)),
         ];
     }
 
@@ -39,6 +48,31 @@ class UserFactory extends Factory
     {
         return $this->state(fn (array $attributes) => [
             'email_verified_at' => null,
+            'email_verification_token' => Str::random(64),
+        ]);
+    }
+
+    /**
+     * Create a buyer user.
+     */
+    public function buyer(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'role' => 'buyer',
+            'store_name' => null,
+            'store_verified_at' => null,
+        ]);
+    }
+
+    /**
+     * Create a seller user.
+     */
+    public function seller(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'role' => 'seller',
+            'store_name' => $this->faker->unique()->company(),
+            'store_verified_at' => now(),
         ]);
     }
 }
