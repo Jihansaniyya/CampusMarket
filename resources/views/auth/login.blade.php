@@ -3,11 +3,23 @@
 @section('title', 'Login')
 
 @section('content')
+    {{-- Tambahkan link font Poppins --}}
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    {{-- Terapkan font Poppins ke seluruh halaman --}}
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+
     <div class="max-w-md w-full mx-auto bg-white p-8 shadow-xl rounded-xl">
         <!-- Logo -->
         <div class="text-center mb-6">
-            <h1 class="text-4xl font-bold text-blue-600">🛒 CampusMarket</h1>
-            <p class="text-gray-600 mt-2">Welcome back! Please login to your account</p>
+            <h1 class="text-4xl font-bold text-blue-600">
+    <i class="fa-solid fa-cart-shopping mr-2"></i> CampusMarket
+</h1>
+            <p class="text-gray-600 mt-2">Selamat Datang! Silahkan login di CampusMarket</p>
         </div>
 
         <!-- Alerts -->
@@ -31,7 +43,7 @@
 
             <!-- Email -->
             <div class="mb-4">
-                <label for="email" class="block text-gray-700 font-semibold mb-2">Email Address</label>
+                <label for="email" class="block text-gray-700 font-semibold mb-2">Alamat Email </label>
                 <div class="relative">
                     <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
                         <i class="fas fa-envelope"></i>
@@ -66,7 +78,7 @@
                         class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
                     <span class="ml-2 text-sm text-gray-600">Remember me</span>
                 </label>
-                <a href="#" class="text-sm text-blue-600 hover:underline">Forgot Password?</a>
+                <a href="#" class="text-sm text-blue-600 hover:underline">Lupa Password?</a>
             </div>
 
             <!-- Submit Button -->
@@ -79,8 +91,8 @@
         <!-- Register Link -->
         <div class="mt-6 text-center">
             <p class="text-gray-600">
-                Don't have an account?
-                <a href="{{ route('register') }}" class="text-blue-600 hover:underline font-semibold">Register here</a>
+                Belum punya akun?
+                <a href="{{ route('register') }}" class="text-blue-600 hover:underline font-semibold">Register disini</a>
             </p>
         </div>
     </div>
