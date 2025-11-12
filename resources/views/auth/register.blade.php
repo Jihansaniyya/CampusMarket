@@ -155,10 +155,11 @@
                     </div>
 
                     <!-- Submit Button -->
-                    <button type="submit"
-                        class="w-full bg-linear-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg hover:scale-105 transform transition-all shadow-lg font-semibold">
-                        Create Account
-                    </button>
+                    <button type="submit" <!-- Submit Button -->
+                        <button type="submit"
+                            class="w-full bg-linear-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg hover:scale-105 transform transition-all shadow-lg font-semibold">
+                            Create Account
+                        </button>
                 </form>
 
                 <!-- Login Link -->

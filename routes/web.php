@@ -7,7 +7,16 @@ use Illuminate\Support\Facades\Route;
 
 // Public Routes
 Route::get('/', function () {
-    return view('welcome');
+    // Redirect ke login jika belum login, atau ke dashboard jika sudah login
+    if (auth()->check()) {
+        if (auth()->user()->role === 'admin') {
+            return redirect()->route('admin.dashboard');
+        } elseif (auth()->user()->role === 'seller') {
+            return redirect()->route('seller.dashboard');
+        }
+        return redirect()->route('welcome.home');
+    }
+    return redirect()->route('login');
 })->name('welcome');
 
 // Authentication Routes

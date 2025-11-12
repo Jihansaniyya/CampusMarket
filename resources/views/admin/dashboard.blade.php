@@ -20,7 +20,7 @@
 
             <!-- Total Users Card -->
             <div
-                class="bg-linear-to-br from-blue-500 to-blue-600 text-white p-6 rounded-xl shadow-lg hover:scale-105 transform transition-all">
+                class="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-6 rounded-xl shadow-lg hover:scale-105 transform transition-all">
                 <div class="flex items-center justify-between">
                     <div>
                         <p class="text-blue-100 text-sm font-medium">Total Users</p>
@@ -37,7 +37,7 @@
 
             <!-- Sellers Card -->
             <div
-                class="bg-linear-to-br from-purple-500 to-purple-600 text-white p-6 rounded-xl shadow-lg hover:scale-105 transform transition-all">
+                class="bg-gradient-to-br from-purple-500 to-purple-600 text-white p-6 rounded-xl shadow-lg hover:scale-105 transform transition-all">
                 <div class="flex items-center justify-between">
                     <div>
                         <p class="text-purple-100 text-sm font-medium">Total Sellers</p>
@@ -54,7 +54,7 @@
 
             <!-- Buyers Card -->
             <div
-                class="bg-linear-to-br from-green-500 to-green-600 text-white p-6 rounded-xl shadow-lg hover:scale-105 transform transition-all">
+                class="bg-gradient-to-br from-green-500 to-green-600 text-white p-6 rounded-xl shadow-lg hover:scale-105 transform transition-all">
                 <div class="flex items-center justify-between">
                     <div>
                         <p class="text-green-100 text-sm font-medium">Total Buyers</p>
@@ -71,7 +71,7 @@
 
             <!-- Products Card -->
             <div
-                class="bg-linear-to-br from-yellow-500 to-yellow-600 text-white p-6 rounded-xl shadow-lg hover:scale-105 transform transition-all">
+                class="bg-gradient-to-br from-yellow-500 to-yellow-600 text-white p-6 rounded-xl shadow-lg hover:scale-105 transform transition-all">
                 <div class="flex items-center justify-between">
                     <div>
                         <p class="text-yellow-100 text-sm font-medium">Products</p>
